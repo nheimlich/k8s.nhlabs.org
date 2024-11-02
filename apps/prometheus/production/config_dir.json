@@ -1,0 +1,13 @@
+{
+  "appName": "prometheus",
+  "userGivenName": "prometheus",
+  "destNamespace": "default",
+  "destServer": "https://kubernetes.default.svc",
+  "srcPath": "blob/main/bundle.yaml",
+  "srcRepoURL": "https://github.com/prometheus-operator/prometheus-operator.git",
+  "srcTargetRevision": "",
+  "labels": null,
+  "annotations": null,
+  "exclude": "",
+  "include": ""
+}
