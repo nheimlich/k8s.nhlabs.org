@@ -3,7 +3,7 @@
   "userGivenName": "prometheus",
   "destNamespace": "default",
   "destServer": "https://kubernetes.default.svc",
-  "srcPath": "releases/download/v0.78.0/bundle.yaml",
+  "srcPath": "bundle.yaml",
   "srcRepoURL": "https://github.com/prometheus-operator/prometheus-operator.git",
   "srcTargetRevision": "",
   "labels": null,
