@@ -1,0 +1,11 @@
+{
+  "appName": "prometheus",
+  "userGivenName": "prometheus",
+  "destNamespace": "default",
+  "destServer": "https://kubernetes.default.svc",
+  "srcPath": "apps/prometheus/overlays/production",
+  "srcRepoURL": "https://github.com/nheimlich/k8s.nhlabs.org.git",
+  "srcTargetRevision": "",
+  "labels": null,
+  "annotations": null
+}
