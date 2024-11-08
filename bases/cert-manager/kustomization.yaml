@@ -11,10 +11,4 @@ helmCharts:
   releaseName: cert-manager
   version: 1.16.1
   repo: https://charts.jetstack.io
-  valuesInline:
-    config:
-      apiVersion: "controller.config.cert-manager.io/v1alpha1"
-      kind: "ControllerConfiguration"
-      enableGatewayAPI: true
-    crds:
-      enabled: true
+  valuesFile: values.yaml
