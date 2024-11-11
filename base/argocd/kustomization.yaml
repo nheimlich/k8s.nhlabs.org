@@ -11,3 +11,8 @@ resources:
 - base/issuer-le-stage.yaml
 - base/gateway.yaml
 - base/http_route.yaml
+
+patches:
+- overlay/argocd-cm.yaml
+- overlay/argocd-cmd-params-cm.yaml
+- overlay/argocd-rbac-cm.yaml
