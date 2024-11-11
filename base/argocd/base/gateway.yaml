@@ -1,0 +1,30 @@
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata:
+  name: argo-gateway
+  annotations:
+    cert-manager.io/issuer: letsencrypt-staging
+spec:
+  gatewayClassName: cilium
+  listeners:
+  - name: https
+    hostname: cd.nhlabs.org
+    protocol: HTTPS
+    port: 443
+    allowedRoutes:
+      namespaces:
+        from: All
+    tls:
+      mode: Terminate
+      certificateRefs:
+        - name: cd-nhlabs-org
+          kind: Secret
+          group: ""
+  - name: http
+    hostname: cd.nhlabs.org
+    protocol: HTTP
+    port: 80
+    allowedRoutes:
+      namespaces:
+        from: All
