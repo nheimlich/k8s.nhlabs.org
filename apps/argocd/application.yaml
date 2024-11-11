@@ -13,3 +13,6 @@ spec:
     path: base/argocd
     repoURL: https://github.com/nheimlich/k8s.nhlabs.org
     targetRevision: HEAD
+    directory:
+      recurse: true
+
