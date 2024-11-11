@@ -8,7 +8,7 @@ spec:
     server: https://acme-v02.api.letsencrypt.org/directory
     email: nolan@nhlabs.org
     privateKeySecretRef:
-      name: letsencrypt-staging
+      name: letsencrypt-production
     solvers:
       - http01:
           gatewayHTTPRoute:
