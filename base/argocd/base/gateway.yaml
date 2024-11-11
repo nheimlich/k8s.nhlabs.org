@@ -4,7 +4,7 @@ kind: Gateway
 metadata:
   name: argo-gateway
   annotations:
-    cert-manager.io/issuer: letsencrypt-staging
+    cert-manager.io/issuer: letsencrypt-production
 spec:
   gatewayClassName: cilium
   listeners:
@@ -14,7 +14,7 @@ spec:
     port: 443
     allowedRoutes:
       namespaces:
-        from: All
+        from: Same
     tls:
       mode: Terminate
       certificateRefs:
@@ -27,4 +27,4 @@ spec:
     port: 80
     allowedRoutes:
       namespaces:
-        from: All
+        from: Same

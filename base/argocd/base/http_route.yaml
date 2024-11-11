@@ -6,12 +6,12 @@ metadata:
 spec:
   parentRefs:
     - name: argo-gateway
+      sectionName: https
   rules:
     - matches:
         - path:
             type: PathPrefix
             value: "/"
-          method: GET
       backendRefs:
         - name: argocd-server
           port: 80
