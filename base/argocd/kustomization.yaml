@@ -5,7 +5,7 @@ kind: Kustomization
 namespace: argocd
 
 resources:
-- github.com/argoproj/argo-cd/manifests/cluster-install?ref=v2.13.0
+- https://github.com/argoproj/argo-cd/manifests/cluster-install?ref=v2.13.0
 - base/repository.yaml
 - base/issuer-le-prod.yaml
 - base/issuer-le-stage.yaml
@@ -13,6 +13,7 @@ resources:
 - base/http_route.yaml
 
 patches:
-- overlay/argocd-cm.yaml
-- overlay/argocd-cmd-params-cm.yaml
-- overlay/argocd-rbac-cm.yaml
+- path: overlay/argocd-cm.yaml
+- path: overlay/argocd-cmd-params-cm.yaml
+- path: overlay/argocd-rbac-cm.yaml
+
