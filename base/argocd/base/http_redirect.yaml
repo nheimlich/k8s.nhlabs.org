@@ -5,14 +5,15 @@ metadata:
   name: http-filter-redirect
 spec:
   parentRefs:
-  - name: argo-gateway
+  - name: shared-gateway
+    namespace: shared-gateway
     sectionName: http
   hostnames:
-  - cd.nhlabs.org
+  - "cd.nhlabs.org"
   rules:
   - filters:
     - type: RequestRedirect
       requestRedirect:
         scheme: https
-        statusCode: 301
+        port: 443
 
