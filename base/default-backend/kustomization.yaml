@@ -4,12 +4,10 @@ kind: Kustomization
 namespace: default-backend
 
 resources:
+- namespace.yaml
 - configuration.yaml
 - daemonset.yaml
-- gateway.yaml
 - http_route.yaml
-- issuer-le-prod.yaml
-- issuer-le-stage.yaml
-- namespace.yaml
+- http_redirect.yaml
 - service-account.yaml
 - service.yaml
