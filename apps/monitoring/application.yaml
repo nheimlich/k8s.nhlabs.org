@@ -13,3 +13,6 @@ spec:
     path: base/monitoring
     repoURL: https://github.com/nheimlich/k8s.nhlabs.org
     targetRevision: HEAD
+  syncPolicy:
+    syncOptions:
+    - Replace=true
